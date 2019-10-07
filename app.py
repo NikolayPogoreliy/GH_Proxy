@@ -11,7 +11,7 @@ SITE_NAME = 'https://habr.com/'
 
 def __get_response_content(response: requests.Response) -> str:
     try:
-        return response.content.decode()
+        return response.text
     except UnicodeDecodeError:
         return ''
 
